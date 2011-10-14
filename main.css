@@ -1,0 +1,96 @@
+body {
+  background-color: #fff;
+  color: #222;
+  font-size: 12pt;
+  font-family:  Helvetica, sans-serif;
+  line-height: 150%;
+  width: 900px;
+  margin: auto;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+  color: #444;
+}
+
+h1 {font-size: 16pt;}
+h2 {font-size: 14pt;}
+h3 {font-size: 12pt;}
+
+.splash {
+  color: black;
+  width: 556px;
+  padding-top: 15px;
+  margin: auto;
+}
+
+.splash h1,.splash h2, .splash p {
+  text-align: center;
+  padding: 0;
+  margin: 2px;
+}
+
+.splash h1 {
+  font-size: 33pt;
+}
+
+.splash h2 {
+  font-size: 16pt;
+  color: #555;
+  padding: 3px;
+  border-bottom: 2px solid #222;
+}
+
+.splash p, .splash a {
+  color: #999;
+  font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+}
+
+div h1, div h2, div h3 {
+  margin-left: 10px;
+}
+
+div {
+  width: 700px;
+}
+
+div.sections {
+  width: 900px;
+  margin: auto;
+}
+
+div.sections div {
+  width: 200px;
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+div.sections div.borders {
+  border-left: 1px solid #aaa;
+}
+
+div.sections div ol ul {
+  padding-left: 20px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #eee;
+  list-style-type: none;
+}
+
+div.sections a:link, div.nav a:link {
+  color: #000;
+  text-decoration: none;
+  line-height: 12pt;
+  font-weight: bold;
+}
+div.sections a:visited, div.nav a:visited {
+  color: #888;
+  text-decoration: none;
+}
+div.sections div a:hover, div.nav a:hover {
+  color: #000;
+  text-decoration: underline overline;
+}
+
+.clear {clear: both;}
