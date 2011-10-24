@@ -78,17 +78,17 @@ div.sections div ol ul {
   list-style-type: none;
 }
 
-div.sections a:link, div.nav a:link {
+.sections a:link, div.nav a:link {
   color: #000;
   text-decoration: none;
   line-height: 12pt;
   font-weight: bold;
 }
-div.sections a:visited, div.nav a:visited {
+.sections a:visited, div.nav a:visited {
   color: #888;
   text-decoration: none;
 }
-div.sections div a:hover, div.nav a:hover {
+.sections a:hover, div.nav a:hover {
   color: #000;
   text-decoration: underline overline;
 }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AI | Notes</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../../main.css" />
+    
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Rating" content="General">
+    <meta name="robots" content="index,follow" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+  </head>
+  <body>
+    <div class="splash">
+      <h1>Artifical Intelligence</h1>
+      <h2>Brian Graham</h2>
+      <p>Adventures in <a href="https://www.ai-class.com/" target="_blank">An Introdution to Artifical Intelligence</a></p>
+    </div>
+    <div class="nav">
+        <a href="../../">Return to main</a>
+    </div>
+
+    <div>
+      <h1>Artificial Intelligence: A modern approach</h1>
+      <h2>Probability in AI</h2>
+      <p>This unit discusses:</p>
+      <ul>
+        <li>Binary events</li>
+        <li>Probability</li>
+        <li>Simple Bayes networks</li>
+        <li>Conditional independence</li>
+        <li>More general discussion of bayes networks</li>
+        <li>D-Seperation</li>
+        <li>Parameter counts</li>
+      </ul>
+      <p>Bayes networks are used in diagnostics, predictions, machine learning, and many other mathamatical applications</p>
+      <h3>Introduction</h3>
+      <p>A Bayes network is a way of expressing conditions that lead to a cause. The example used is a condition being a car that won't start. Causes may be many things, however, each cause may have it's own sub cause. A car not starting may be due to a flat battery, or no gas in the car. A flat battery would cause the lights to not turn on (but they would work on an empty tank of gas), and may be caused by things such as no charge or being disconnected.
+      In the example video given, there are 16 binary variables, meaning a total value of 65536 values. Obviously many of these values are unrealistic, and the total size of the real problem is much smaller in practice. Bayes network shows this model in a better way.
+      </p>
+      <h3>Probability</h3>
+      <p>Every event has a probability, whith a complementary event. Any complementary event is equal to one minus the event.</p>
+      <p>Probability for any group of events is equal to the product of individual events that comprise a group. Probabilities always add up to 1. This is a quick review of basic probability. A fair coin toss has a probability of 0.5 for coming up heads, and the same 0.5 for coming up tails. An unfair coin with a 0.25 chance of coming up heads has a 0.75 chance of coming up tails</p>
+      <p>A fair coin (0.5 chance coming up tails) coming up heads three times in a row has a probability of 0.5*0.5*0.5 which equals 0.125.</p>
+      <p>Probability of getting a fair coin to come up with the same result four times in a row is the same as 0.5^4 for heads plus another 0.5^4 for tails, which gives us 0.125</p>
+      <p>Chances of coming up with 3 or more heads in a set of 4 flips does much the same thing, except we take into account there are 15 combinations of total coin flips, where there are only 5 out of all 16 situations that look like this, which is 5/16 = 0.3125</p>
+      
+      <h3>Dependence</h3>
+      <p>Dependency lets us build more complex rules around probability. The sample provided is a coin that has a 50/50 chance of coming up heads. The second flip will have a 0.9 chance of being heads if the first flip was heads, alternatively, it will have a 0.8 chance of being tails if the first flip was tails. Thus, the probability of the second flip being heads requires calculating the chances for both probabilities. </p>
+      <p>Since there are two paths here, with the first 0.5*0.9 (heads x heads), and 0.5*0.2(tails*heads), the value is the sum of these products, giving us 0.55.</p>
+      <p>The total probability theorm states the probability of a variable with a value n multiplied by another value of n is the total probability. <img alt="\Pr(A)=\sum_n \Pr(A\mid B_n)\Pr(B_n)\," src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQIAAAAjBAMAAACN5hlEAAAAMFBMVEX///9QUFCKiop0dHQwMDAEBAS2trZiYmKenp7MzMwiIiIWFhYMDAxAQEDm5uYAAABlY7kCAAAAAXRSTlMAQObYZgAAA89JREFUWAntV01oE0EUfm2S5sdkYw8epFAC3ryYiwqCGFTw4MGqJz1oQFAvoqKgCNLcPHhoQPGghRYv2oPUIniwlvYkCFIL/qE27Yp6U6z/Sqzr92bf7E7GrBQpBMEHmXnzvvd9+Xayu0OIFhZefRRxe6/nlRdG+MsuR/OCRBd6P/rZufGSLsn8W6uJNwHdP+LLNRor60zmjFf1s/Y9FhJwUG+TpqAlVg5SSRpbGH97f6x2TYjJimrLoDyjsnBw9k7I4kAkhyjuC637UXt4w29nHWe6Xnv2VOgnMVt4X4WSX3z4vD+tqhC98tNw7JuXPIW5OSdwkP5GdLio+pVOCuveslqnS5gsHGp0T6E05E+zIOdQbYg2z6g05wQOYnNE2euKrnTYQXZCrTNVTBbOasNcp7RPir1bStQxyBUzxo0boDkncBCHUL6kyEqHHWS+q/UlHi1cqbkMJPHNiAv5KYw9KjeGgXq4iODo+yABod6q3846ysFPtT7Ko4Wz2u7U+JnNlCkwTJXsIMarnJrR7kFXIoKjHQxUqO2mtLIOO0gMnv12vESXuWzhUMtNUn5mNSWU7Q7KXEfXE3xy/BYavcUkxCx0JCI42sGGY2vHdCvrsINpl+Zf9tAurlt435YTD/yNybsMpynOO9fJeUNkP7t6HcHRDrbizTApvayT+nTidJFoO1L1W1h4X4F7E+jIc0Lra8/nMJ1WC3Po8Kb0MoKjHeCrnPfSyzqpD2qxEyNLsxUTF7WCOEi7FGOjvzugZS7qKiI44oAfd/okrYaDHSixAxs31FzAeOG08wuqE5/G+8C5g5IfERxxwFfQ8VVaWUf2gB3wxdl4qJYtAy6AzdeAe8OKJYWgEMERB7kJPP57nFP7+PpZx3DAV2HjoVq8gB1ais9HtOmnCanEFZ3grVzgPIGxgSMOsrhfHpVj2SN8Y7GO4WAjlhb+YnykisueHcHvP0Xpbdiqrh+Q6EFrQ+RQlIji+A5yw2O1rd3kvKZ+9EPH6aovR3ao3o37HFtg41oWnRNhngq/T4rrQtDITE7wVvbxlXQUl2/pvAm5zfDHISznbFhITUqeDGucGRzLwRO6W5TfJaTkykHeDDeO5ENBoyT9VUmONSIGx3IwRJsqZOs4pYDeDG8vBnDY6JeCR/EiP09GGBzLgWoqGa0qXdFYsPE1Gk66OpN5yeP9iIMrpr2ShQQc1HN6o3RP0tWZnmNlnfGcdDEsLLZ5OioLIyx6F++AH4su/V/w/w78azsgx20Lbctx20IHcty20AGp47SVBvAXAsdtS0Mdp4vu4BdfKFZr2MNimgAAAABJRU5ErkJggg=="></p>
+      <p>Probability of the congruent value of one variable can be negated to find the congruent event. Be careful to ensure only the opposite probability is negated, and not the condition if using this.</p>
+      
+      <h3>Bayes</h3>
+      <p>Intelligence is how we think, which we do not fully understand. AI is the search to find a way to model the way we think. We can think about how people act in several ways:</p>
+      
+      <h3>Conditional</h3>
+      <p>Intelligence is how we think, which we do not fully understand. AI is the search to find a way to model the way we think. We can think about how people act in several ways:</p>
+      
+      <h3>Network</h3>
+      <p>AI crosses a lot of domains of knowledge and tries to bring models from them togeter into a way we can model a rational agent from them.</p>
+      
+    </div>
+
+    <hr/>
+
+    <div class="sections">
+      <h1>Problem?</h1>
+      <p>This whole site is hosted on GitHub, you can edit the source code yourself and ask for me to make changes, make and grow your own copy, or create issue reports for me. You can also find me on twitter @BrianJGraham.</p>
+    </div>
+  </body>
+</html>
